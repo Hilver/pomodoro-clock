@@ -1,0 +1,101 @@
+body {
+ background-color: #558C89;
+  margin: 0 auto;
+  font-family: 'Bubbler One', sans-serif;
+  color: white;
+}
+
+.header h2 {
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+
+#clock{
+  witdth: 250px;
+  height: 250px;
+  display: block;
+}
+
+
+.component {
+   color: white;
+  display: inline-block;
+  font-size: 40px;
+  margin: 5px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.leftSideComponent {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.rightSideComponent {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+ #clock {
+      z-index: 1;
+      width: 280px;
+      height: 280px;
+      line-height: 280px;
+      -webkit-border-radius: 140px;
+      -moz-border-radius: 140px;
+      border-radius: 140px;
+      border: 2px solid white;
+      background-color: #558C89;
+   background-size: 20px 20px;
+      cursor: pointer;
+    }
+
+#time {
+  z-index: 3;
+  margin: 0 auto;
+  font-size: 100px;
+  text-align: center;
+}
+
+#progressBar{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 280px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+#progress {
+  height: 39px;
+  background: white;
+  width: 0px;
+  float: left;
+  border: 0px;
+}
+
+.disabledbutton {
+    pointer-events: none;
+}
+
+#breakProgress {
+  height: 38px;
+  background: red;
+  width: 0px;
+  float: left;
+  border: 0px;
+}
+
+.info{
+  margin: 10px 0px;
+  color: white;
+  font-size: 25px;
+}
