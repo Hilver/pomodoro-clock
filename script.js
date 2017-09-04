@@ -6,7 +6,7 @@ $(document).ready(function(){
   $("#leftMinus").click(function(){
     breakLength = breakLength - 1;
     $("#leftText").html(breakLength);
-    console.log(breakLength);
+//    console.log(breakLength);
     if(breakLength <= 1){
       breakLength = 1;
       $("#leftText").html(breakLength);
@@ -16,14 +16,14 @@ $(document).ready(function(){
    $("#leftPlus").click(function(){
     breakLength = ++breakLength;
     $("#leftText").html(breakLength);
-    console.log(breakLength);
+//    console.log(breakLength);
   });
 
   $("#rightMinus").click(function(){
     sessionLength = sessionLength - 1;
     $("#rightText").html(sessionLength);
     $("#time").html(sessionLength);
-    console.log(sessionLength);
+//    console.log(sessionLength);
     if(sessionLength <= 1){
       sessionLength = 1;
       $("#rightText").html(sessionLength);
@@ -37,7 +37,7 @@ $(document).ready(function(){
     $("#rightText").html(sessionLength);
      $("#time").html(sessionLength);
      clearInterval(nIntervId);
-    console.log(sessionLength);
+//    console.log(sessionLength);
   });
 
 
@@ -48,12 +48,11 @@ $(document).ready(function(){
    nIntervId = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
       var width = ((breakTime - timer)/breakTime) * 278;
         $("#breakProgress").width(width);
-      console.log(width);
+//      console.log(width);
 
         display.text(minutes + ":" + seconds);
 
@@ -68,6 +67,7 @@ $(document).ready(function(){
         var sessionTime = 60 * sessionLength;
         startTimer(sessionTime, display);
          $(".info").html("Session Time!");
+         new Audio('Japanese_bell_sound.mp3').play();
       }
 
     }, 1000);
@@ -84,7 +84,7 @@ $(document).ready(function(){
         seconds = seconds < 10 ? "0" + seconds : seconds;
         var width = ((duration - timer)/duration) * 278;
         $("#progress").width(width);
-        console.log(width);
+    //    console.log(width);
 
         display.text(minutes + ":" + seconds);
 
@@ -98,6 +98,7 @@ $(document).ready(function(){
         clearInterval(nIntervId);
         $(".info").html("Break Time!");
         startBreak(breakTime, display);
+        new Audio('Japanese_bell_sound.mp3').play();
       }
     }, 1000);
 }
